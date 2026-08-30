@@ -18,7 +18,9 @@ const Welcome = () => {
         {renderText("Hey, I am Aaliyan! Welcome to my", 'text-3xl font-georama', 100)}
         
       </p>
-      <h1 ref={titleRef} className='mt-6 uppercase'>Portfolio</h1>
+      <h1 ref={titleRef} className='mt-6 uppercase'>
+        {renderText("Portfolio", 'text-9xl italic font-georama', 400)}
+      </h1>
 
       <div className='small-screen'>
         <p>This portfolio is designed for desktop/tablets only.</p>
