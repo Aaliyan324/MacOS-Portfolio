@@ -15,11 +15,13 @@ const Dock = () => {
                 {dockApps.map(({id, name, icon, canOpen}) => (
 
                     <div key={id ?? name} className='relative flex justify-center'>
+
                         <button type='button' className='dock-icon' aria-label={name} data-tooltip-id="dock-tooltip" data-tooltip-content={name} data-tooltip-delay-show={150} disabled={!canOpen} onClick={()=>toggleApp({id, canOpen})}>
                             <img src={`/images/${icon}`} loading='lazy' className={canOpen ? '' : "opacity-60"} />
                         </button>
+                        
                     </div>
-                    
+
                 ))}
 
                 <Tooltip id='dock-tooltip' place='top' className='tooltip'/>
